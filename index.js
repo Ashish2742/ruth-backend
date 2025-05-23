@@ -11,11 +11,16 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ["https://www.ruthinternational.com","ruthinternational.com","www.ruthinternational.com"],
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true,
-}));
+    origin: [
+      "https://www.ruthinternational.com",
+      "https://ruthinternational.com"
+    ],
+    methods: ["POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }));
+
+
 app.use(express.json());
 app.use("/api/v1", formsRoutes);
 
