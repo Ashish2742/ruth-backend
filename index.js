@@ -9,19 +9,24 @@ const app = express();
 // Connect MongoDB
 connectDB();
 
-// Middleware
+// CORS Middleware - ensure it's before routes
 app.use(cors({
     origin: [
       "https://www.ruthinternational.com",
       "https://ruthinternational.com"
     ],
-    methods: ["POST"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include OPTIONS
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
-  }));
+}));
 
+// Enable preflight for all routes
+app.options("*", cors());
 
+// JSON parsing
 app.use(express.json());
+
+// API Routes
 app.use("/api/v1", formsRoutes);
 
 // Start server
