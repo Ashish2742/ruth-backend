@@ -11,7 +11,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ["https://www.ruthinternational.com","ruthinternational.com"],
+  origin: ["https://www.ruthinternational.com","ruthinternational.com","www.ruthinternational.com"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
