@@ -30,7 +30,7 @@ class FormsServices {
     const { name, email, phone, position, education } = data;
 
     await sendEmail({
-      to: 'patil.ashish.19it5008@gmail.com',
+      to: 'fouritmarinemumbai@gmail.com',
       subject: `New Admission Form Submission from ${name}`,
       text: `New admission form submitted:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPosition: ${position}\nEducation: ${education}`,
       html: wrapInCard('New Admission Form Submission', {
@@ -48,7 +48,7 @@ class FormsServices {
     const { name, email, phone, position, education, experience } = data;
 
     await sendEmail({
-      to: 'patil.ashish.19it5008@gmail.com',
+      to: 'fouritmarinemumbai@gmail.com',
       subject: `New Career Application from ${name}`,
       text: `New career application:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPosition: ${position}\nEducation: ${education}\nExperience: ${experience}`,
       html: wrapInCard('New Career Application', {
@@ -67,7 +67,7 @@ class FormsServices {
     const { name, email, subject, message } = data;
 
     await sendEmail({
-      to: 'patil.ashish.19it5008@gmail.com',
+      to: 'fouritmarinemumbai@gmail.com',
       subject: `New Enquiry: ${subject}`,
       text: `New enquiry received:\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
       html: wrapInCard('New Enquiry', {
