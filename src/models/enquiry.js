@@ -5,6 +5,6 @@ const EnquirySchema = new mongoose.Schema({
   subject: String,
   message: String,
   email: { type: String, required: true },
-});
+},{ timestamps: true });
 
 module.exports = mongoose.model("Enquiry", EnquirySchema);
