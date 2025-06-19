@@ -7,6 +7,7 @@ const CareerSchema = new mongoose.Schema({
   experience: String,
   email: { type: String, required: true },
   phone: { type: String, required: true },
-});
+},
+  { timestamps: true });
 
 module.exports = mongoose.model("Career", CareerSchema);
